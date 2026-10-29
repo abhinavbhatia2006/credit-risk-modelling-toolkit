@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+data/
+runs/
+*.joblib
+.env
+.env.*
+!.env.example
+*.pem
+*.key

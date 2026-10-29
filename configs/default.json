@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "split": "stratified",
+  "date_column": null,
+  "label_horizon_days": 30,
+  "fractions": {"train": 0.55, "calibration": 0.15, "validation": 0.15, "test": 0.15},
+  "logistic_c": 0.1,
+  "boosting_iterations": 150,
+  "boosting_max_leaf_nodes": 15,
+  "false_negative_cost": 5.0,
+  "false_positive_cost": 1.0,
+  "bootstrap_repetitions": 200,
+  "psi_warning": 0.1,
+  "psi_alert": 0.25
+}

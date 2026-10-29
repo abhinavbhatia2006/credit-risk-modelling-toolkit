@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "creditrisk-cli"
+version = "1.0.0"
+description = "Reproducible credit-card risk modeling, validation and monitoring from the terminal"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26,<3", "pandas>=2.2,<4", "scikit-learn>=1.6,<2",
+  "matplotlib>=3.8,<4", "joblib>=1.3,<2", "xlrd>=2.0,<3", "threadpoolctl>=3.1,<4"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1"]
+
+[project.scripts]
+creditrisk = "creditrisk.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
